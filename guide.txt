@@ -1,0 +1,37 @@
+1.install TDM GCC-64 x86 webdl build on C disk
+2.install msys when will be asking press y point to C:/TDM-GCC-64
+3.install msys DTK 1.0 in C:/msys/1.0
+4.install msys CORE 1.0 untar it in C:/msys/1.0
+5. copy to bin folder from archives in folder bin :glib2.2.8-1,gettext-
+
+runtime_0.18.1.1-2,pkg-config_0.26-1,yasm-1.3.0 and rename to
+
+yasm,pr.exe,mktemp_1.6.
+6.copy dx7headers to include folder
+7.copy unpacked zlib folder to C:/msys/1.0/home/v (or other username if you
+
+have other than v)
+8. type in console 'ls'
+9.write in console cd zlib or zlib-1.2.11 after typing write in console make -f
+
+win32/Makefile.gcc BINARY_PATH=/bin INCLUDE_PATH=/usr/local/include
+
+LIBRARY_PATH=/usr/local/lib install
+10. instal cmake on C
+11.write in ffmpeg folder file called CMakeLists.txt
+12.in cmake lists.txt write : Cmake_minumim_required(VERSION 3.10.1)
+project(app_ffmpeg)
+add_executables(myproject ffmpeg.c)
+install (TARGETS myproject DESTINATION bin)
+13.run cmake gui browse source code on C, browse build to C:/CMAKE/bin
+press configure choose default native gcc compiler makefiles generate few times
+
+lines should be white
+14.type cd c:/ffmpeg-3.3.5 after that write make
+15.exit msys
+16. run msys again type cd c:/Mplayer-1.3.0
+after that write make
+17.happy compiling
+
+have fun
+PS:still zlib must be copied to include and lib folder also bin folder zlib1.dll 
